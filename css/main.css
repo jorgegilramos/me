@@ -42,3 +42,7 @@ ol.toc > li a.active {
     color: #444;
     font-weight: bold;
 }
+ol.toc.sticky {
+    position: fixed;
+    top: 20px;
+}
