@@ -8,3 +8,8 @@ html, body {
     font-size: 18px;
     margin: 0;
 }
+.wrap {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 15px;
+}
