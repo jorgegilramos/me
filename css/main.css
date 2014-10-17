@@ -8,6 +8,13 @@ html, body {
     font-size: 18px;
     margin: 0;
 }
+a {
+    color: #4183c4;
+    text-decoration: none;
+}
+header {
+    padding: 35px 0 20px;
+}
 .wrap {
     margin: 0 auto;
     max-width: 960px;
