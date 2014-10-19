@@ -13,6 +13,7 @@ a {
     text-decoration: none;
 }
 header {
+    background:#dfefef;
     padding: 35px 0 20px;
 }
 .wrap {
@@ -45,4 +46,8 @@ ol.toc > li a.active {
 ol.toc.sticky {
     position: fixed;
     top: 20px;
+}
+footer {
+    background:#dfefef;
+}
 }
