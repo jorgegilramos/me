@@ -15,11 +15,13 @@ a {
     text-decoration: none;
 }
 header {
-    background:#dfefef;
+    background:#2980b9; /*#dfefef*/
+	color:#ffffff;
     padding: 35px 0 20px;
 }
 footer {
-    background:#dfefef;
+    background:#2980b9; /*#dfefef*/
+	color:#ffffff;
     padding:35px 0 120px;
 }
 /* Columns & Layout */
@@ -95,4 +97,23 @@ ol.toc.sticky {
   footer {
     font-size: 12px;
   }
+}
+
+.content-body {
+  font-size: 15px;
+  line-height: 1.7;
+  overflow: hidden; 
+}
+.content-body > *:first-child {
+    margin-top: 0 !important; 
+}
+.content-body > *:last-child {
+    margin-bottom: 0 !important;
+}
+.content-body p,
+.content-body blockquote,
+.content-body ul, .content-body ol, .content-body dl,
+.content-body table,
+.content-body pre {
+	margin: 15px 0; 
 }
