@@ -9,6 +9,7 @@ html, body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     margin: 0;
+	/*background-image:url(file:///C:/Users/Abyss/Pictures/Pictures/clouds.jpg);*/
 }
 a {
     color: #4183c4;
@@ -98,7 +99,15 @@ ol.toc.sticky {
     font-size: 12px;
   }
 }
-
+#under-construction {
+  background-color:#a2ce7e; /*#1fa67a; #1b926c*/
+  color:#468847; /*#a5d8c7;*/
+  /*opacity:0.15;*/
+  padding:20px 0;
+}
+#center-body {
+  background-color: rgba(255, 255, 255, 0.8);
+}
 .content-body {
   font-size: 15px;
   line-height: 1.7;
