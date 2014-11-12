@@ -124,12 +124,14 @@ ol.toc.sticky {
     font-size: 12px;
   }
 }
-#under-construction {
+#under-construction, #no-js-message {
   background-color:#a2ce7e; /*#1fa67a; #1b926c*/
   color:#468847; /*#a5d8c7;*/
   /*opacity:0.15;*/
   padding:20px 0;
 }
+#no-js-message { display: none;}
+.no-js #no-js-message{ display: block; }
 #center-body {
   background-color: rgba(255, 255, 255, 0.8);
 }
