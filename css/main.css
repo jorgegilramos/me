@@ -9,7 +9,6 @@ html, body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
   margin: 0;
-  /*background-image:url(file:///C:/Users/Abyss/Pictures/Pictures/clouds.jpg);*/
 }
 a {
   color: #4183c4;
@@ -53,7 +52,10 @@ a.profile-icon:hover {
 footer {
   background:#2980b9; /*#dfefef*/
   color:#ffffff;
-  padding:35px 0 120px;
+  padding:35px 0 50px;
+}
+a#copy{
+  color:#ffffff;
 }
 /* Columns & Layout */
 .wrap {
