@@ -1,5 +1,4 @@
 $(function(){
-
   // Initalize the ToC if we're on an article page
   if ($('.js-toc').length) {
     tableOfContents($('.js-toc'));
@@ -37,7 +36,7 @@ $(function(){
     var didScroll = false;
     $(window).scroll(function() {
       didScroll = true;
-    })
+    });
 
     setInterval(function() {
       if (didScroll) {
@@ -51,20 +50,19 @@ $(function(){
       highlightTocSection();
     }, 100);
 
-    var exampleNav = $('.js-examples-nav')
-    if (exampleNav.length){
-      exampleNav.on('click', 'a', function(event){
-        event.preventDefault()
-        exampleNav.find('a').removeClass('selected')
-        $('.markdown-example').hide()
-        $('#' + $(this).attr('data-container-id')).show()
-        $(this).addClass('selected')
-      })
-    }
-
+    //var exampleNav = $('.js-examples-nav')
+    //if (exampleNav.length){
+    //  exampleNav.on('click', 'a', function(event){
+    //    event.preventDefault()
+    //    exampleNav.find('a').removeClass('selected')
+    //    $('.markdown-example').hide()
+    //    $('#' + $(this).attr('data-container-id')).show()
+    //    $(this).addClass('selected')
+    //  })
+    //}
   }
-})
-
+  $("#fancy-modal-rss").fancybox();
+});
 
 // Generates a table of contents based on a.toc-item elements throughout the
 // page. Follows along via scroll
@@ -74,22 +72,26 @@ var tableOfContents = function($listContainer) {
   $('.toc-item').each(function(index, chapterAnchor) {
     $chapterAnchor = $(chapterAnchor);
     var listLink = $('<a>')
-    .attr('href', '#' + $chapterAnchor.attr('id'))
-    .text($chapterAnchor.attr('title'))
-    .bind('click', scrollTo);
+      .attr('href', '#' + $chapterAnchor.attr('id'))
+      .text($chapterAnchor.attr('title'))
+      .bind('click', scrollTo);
 
     var listItem = $('<li>').append(listLink);
 
     $listContainer.append(listItem);
-  })
+  });
 }
 
 var scrollTo = function(e) {
-  e.preventDefault();
-  var elScrollTo = $(e.target).attr('href');
-  var $el = $(elScrollTo);
-
-  $('body,html').animate({ scrollTop: $el.offset().top }, 400, 'swing', function() {
-    location.hash = elScrollTo;
-  })
+  // Avoid fancybox scrolling events
+  if (e && e.target){
+    e.preventDefault();
+    var elScrollTo = $(e.target).attr('href');
+    var $el = $(elScrollTo);
+    $('body,html').animate({ scrollTop: $el.offset().top }, 400, 'swing', function() {
+      location.hash = elScrollTo;
+    });
+  }
 }
+
+
