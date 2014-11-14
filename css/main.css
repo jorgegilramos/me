@@ -4,32 +4,62 @@
   box-sizing: border-box;
 }
 html, body {
-    background-color: #fff;
-    color: #444;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    margin: 0;
-	/*background-image:url(file:///C:/Users/Abyss/Pictures/Pictures/clouds.jpg);*/
+  background-color: #fff;
+  color: #444;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  margin: 0;
+  /*background-image:url(file:///C:/Users/Abyss/Pictures/Pictures/clouds.jpg);*/
 }
 a {
-    color: #4183c4;
-    text-decoration: none;
+  color: #4183c4;
+  text-decoration: none;
 }
 header {
-    background:#2980b9; /*#dfefef*/
-	color:#ffffff;
-    padding: 35px 0 20px;
+  background:#2980b9; /*#dfefef*/
+  color:#ffffff;
+  padding: 20px 0 20px;
+}
+h1#site-title {
+  display: inline-block;
+  font-family: "Pacifico",Georgia,serif;
+  font-size: 28px;
+  padding-left: 10px;
+  margin: 0px;
+}
+#logo {
+  float: left;
+  height:60px;
+}
+header .profile-icons {
+  border-left: 1px solid white;
+  float:right;
+  margin-left: 20px;
+  margin-top: 6px;
+  padding-left: 10px;
+}
+a.profile-icon {
+  border-radius: 300px;
+  color: #ffffff;
+  height: 36px;
+  padding: 10px 0 12px;
+  text-align: center;
+  width: 36px;
+  margin: 0px;
+}
+a.profile-icon:hover {
+  background: none repeat scroll 0 0 #5cc9df !important;
 }
 footer {
-    background:#2980b9; /*#dfefef*/
-	color:#ffffff;
-    padding:35px 0 120px;
+  background:#2980b9; /*#dfefef*/
+  color:#ffffff;
+  padding:35px 0 120px;
 }
 /* Columns & Layout */
 .wrap {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 0 15px;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 15px;
 }
 article .content-body {
     font-size: 18px;
@@ -57,6 +87,13 @@ ol.toc.sticky {
   position: fixed;
   top: 20px;
 }
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(../fonts/pacifico_v7.woff) format('woff');
+}
+
 
 /* Columns */
 .col-sm-4 {
@@ -78,6 +115,10 @@ ol.toc.sticky {
     width: auto;
     margin: -10px 0 20px;
   }
+  .hide-phone {
+    display:none;
+  }
+  
   /* Columns */
   .col-sm-4 {
     float:none;
