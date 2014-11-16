@@ -30,9 +30,12 @@ h1#site-title {
   float: left;
   height:60px;
 }
-header .profile-icons {
+header .profile-icons  {
   border-left: 1px solid white;
   float:right;
+}
+.profile-icons {
+  font-size: 26px;
   margin-left: 20px;
   margin-top: 6px;
   padding-left: 10px;
@@ -40,10 +43,10 @@ header .profile-icons {
 a.profile-icon {
   border-radius: 300px;
   color: #ffffff;
-  height: 36px;
-  padding: 10px 0 12px;
+  height: 46px;
+  padding: 10px 0 10px;
   text-align: center;
-  width: 36px;
+  width: 46px;
   margin: 0px;
 }
 a.profile-icon:hover {
