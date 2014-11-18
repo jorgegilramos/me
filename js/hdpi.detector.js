@@ -18,6 +18,7 @@ if (window.Modernizr){
       return true;
     else
       return Modernizr.mq(mediaQuery);
+	return false;
   });
 } else {
   window.Detector = (function(window, document, undefined){
@@ -30,6 +31,7 @@ if (window.Modernizr){
         return true;
       else
         return window.matchMedia && window.matchMedia(mediaQuery).matches;
+	  return false;
     }();
     // Add class to document
     if (docElement.className === undefined) docElement.className="";
