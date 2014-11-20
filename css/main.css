@@ -52,6 +52,90 @@ a.profile-icon {
 a.profile-icon:hover {
   background: none repeat scroll 0 0 #5cc9df !important;
 }
+
+#hamburger {
+	/*display: block;*/
+  float:right;
+	width: 40px;
+	height: 36px;
+	margin: 6px;
+  position:relative;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+#hamburger:before,
+#hamburger:after,
+#hamburger span {
+	background: #ffffff;
+	content: "";
+	display: block;
+	width: 30px;
+	height: 6px;
+	position: absolute;
+	left: 5px;
+}
+#hamburger:before {
+	top: 5px;
+}
+#hamburger:after {
+	bottom: 5px;
+}
+#hamburger span {
+	top: 50%;
+	margin-top: -3px;
+}
+
+/*@media all and (min-width: 1430px) {
+#hamburger {
+    display: none;
+}
+}*/
+#hamburger:before, #hamburger:after, #hamburger span {
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+    transition-property: transform, top, bottom, left, opacity;
+    transition-timing-function: ease;
+}
+/*html.mm-opening #hamburger span {
+    left: -50px;
+    opacity: 0;
+}
+html.mm-opening #hamburger:before {
+    top: 15px;
+    transform: rotate(45deg);
+}
+html.mm-opening #hamburger:after {
+    bottom: 15px;
+    transform: rotate(-45deg);
+}*/
+
+/* Ipad Issue con mmenu header & footer */
+html .mm-header .mm-prev, html .mm-header .mm-next {
+    height:29px;
+}
+
+.mm-menu.mm-white .mm-list > li > a.mm-subclose {
+    color: rgba(0, 0, 0, 0.3) !important;
+    background:inherit !important;
+    font-size:16px !important;
+}
+.mm-menu.mm-white .mm-list .mm-subtitle {
+    border-bottom:rgba(0, 0, 0, 0.1) 1px !important;
+    border-bottom-style:solid !important;
+}
+#menu-help {
+}
+#menu-footer {
+    padding:0px 20px 30px 44px;
+}
+#menu-footer:after {
+    border: medium none !important;
+}
+
+.show-phone {
+  display:none;
+}
 footer {
   background:#2980b9; /*#dfefef*/
   color:#ffffff;
@@ -77,6 +161,7 @@ article .content-body {
 }
 ol.toc {
     padding: 0;
+    margin-top: 18px;
 }
 ol.toc > li {
     font-size: 16px;
@@ -98,8 +183,23 @@ ol.toc.sticky {
   font-weight: 400;
   src: local('Pacifico Regular'), local('Pacifico-Regular'), url(../fonts/pacifico_v7.woff) format('woff');
 }
-
-
+/* tagcloud */
+.widget_tag_cloud .tagcloud a, #tagcloud a {
+  background: url("../img/tags_bg.png") no-repeat scroll right -28px rgba(0, 0, 0, 0);
+  color: #5c5c5c;
+  display: inline-block;
+  font-size: 12px !important;
+  line-height: 28px;
+  margin: 5px 6px 5px 0;
+  padding: 0 15px 0 0;
+  text-shadow: 0 1px 1px #fff;
+  /*box-sizing: border-box;*/
+}
+.widget_tag_cloud .tagcloud a span, #tagcloud a span {
+    background: url("../img/tags_bg.png") no-repeat scroll left 0 rgba(0, 0, 0, 0);
+    display: block;
+    padding: 0 0 0 25px;
+}
 /* Columns */
 .col-sm-4 {
   float:left;
@@ -118,10 +218,14 @@ ol.toc.sticky {
   ol.toc {
     float: none;
     width: auto;
-    margin: -10px 0 20px;
+    /*margin: -10px 0 20px;*/
+    margin: 18px 0;
   }
   .hide-phone {
     display:none;
+  }
+  .show-phone {
+    display:block;
   }
   
   /* Columns */

@@ -61,7 +61,19 @@ $(function(){
     //  })
     //}
   }
+  $("#mainMenu").mmenu({
+    classes: "mm-white", //"mm-light", // "mm-white" "mm-fullscreen"
+    //slidingSubmenus: false,
+    counters: true,
+    offCanvas: {
+      //pageNodetype: "article",
+      zposition: "front"
+    }
+  });
+  
+  // fancybox 
   $("#fancy-modal-rss").fancybox();
+  $("#tagcloud a").fancybox();
 });
 
 // Generates a table of contents based on a.toc-item elements throughout the
