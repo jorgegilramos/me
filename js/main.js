@@ -29,7 +29,8 @@ $(function(){
       })
       highlightIndex += 1;
       $('ol.toc .active').removeClass('active');
-      $('ol.toc li:nth-child(' + highlightIndex + ') a').addClass('active');
+      //$('ol.toc li:nth-child(' + highlightIndex + ') a').addClass('active');
+      $('ol.toc li:nth-child(' + highlightIndex + ')').addClass('active');
     }
     highlightTocSection();
 
