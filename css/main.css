@@ -274,6 +274,14 @@ ol.toc.sticky {
     font-size: 12px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  /* Phone */
+  #hamburger {
+    float: none;
+    margin-top: 26px;
+  }
+}
 #under-construction, #no-js-message {
   background-color:#a2ce7e; /*#1fa67a; #1b926c*/
   color:#468847; /*#a5d8c7;*/
