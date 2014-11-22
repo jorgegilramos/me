@@ -18,9 +18,9 @@
     Detector.dpr = function() {
       if (supportDevicePixelRatio) {
         var maxdpr = 1.0;
-        for (var i=1.0; i<maxRatio; i+=0.1) {
+        for (var i=1.0; i<maxRatio; i=i+0.1) {
           if (!window.matchMedia("only screen and (" + supportDevicePixelRatio + "device-pixel-ratio:" + i + ")").matches) {
-            return maxdpr;
+            break;
           }
         }
         return maxdpr;
@@ -30,11 +30,13 @@
 
     Detector.dppx = function() {
       if (window.matchMedia) {
-        for (var i=1.0; i<maxRatio; i+=0.1) {
-          if (window.matchMedia("only screen and (min-resolution:" + i + "dppx)").matches) {
-            return i;
+        var maxdppx = 1.0;
+        for (var i=1.0; i<maxRatio; i=i+0.1) {
+          if (!window.matchMedia("only screen and (min-resolution:" + i + "dppx)").matches) {
+            break;
           }
         }
+        return maxdppx;
       }
       return undefined;
     }();
