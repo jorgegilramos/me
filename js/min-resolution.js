@@ -31,7 +31,7 @@
     Detector.ddpx = function() {
       if (window.matchMedia) {
         for (var i=1.0; i<maxRatio; i+=0.1) {
-          if (window.matchMedia("(min-resolution:" + i + "dppx)").matches) {
+          if (window.matchMedia("(min-resolution:" + i + "ddpx)").matches) {
             return i;
           }
         }
