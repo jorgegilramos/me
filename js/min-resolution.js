@@ -28,10 +28,10 @@
       return undefined;
     }();
 
-    Detector.ddpx = function() {
+    Detector.dppx = function() {
       if (window.matchMedia) {
         for (var i=1.0; i<maxRatio; i+=0.1) {
-          if (window.matchMedia("(min-resolution:" + i + "ddpx)").matches) {
+          if (window.matchMedia("(min-resolution:" + i + "dppx)").matches) {
             return i;
           }
         }
@@ -39,8 +39,8 @@
       return undefined;
     }();
     
-    Detector.dpi = Detector.ddpx*96;
-    //Detector.dpi = function() { return Detector.ddpx*96; }();
+    Detector.dpi = Detector.dppx*96;
+    //Detector.dpi = function() { return Detector.dppx*96; }();
     
     /*var dpi = function() {
       if (window.matchMedia) {
