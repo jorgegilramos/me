@@ -1,4 +1,3 @@
-
   window.Detector = (function(window, document, undefined){
     Detector = {};
     var maxRatio=4.0;
@@ -19,9 +18,9 @@
       if (Detector.supportDevicePixelRatio) {
         var maxdpr = 1.0;
         var i=1.0;
-        for (; i<=maxRatio; i=(i+0.1).toFixed(1)) {
+        for (; i<=maxRatio; i=parseFloat((i+0.1).toFixed(1))) {
           //console.log("trying dpr: " + i);
-          if (!window.matchMedia("(only screen and (" + Detector.supportDevicePixelRatio + "device-pixel-ratio:" + i.toFixed(1) + "))").matches) {
+          if (window.matchMedia("(only screen and (" + Detector.supportDevicePixelRatio + "device-pixel-ratio:" + i.toFixed(1) + "))").matches===false) {
             break;
           } else {
             maxdpr = i;
@@ -36,10 +35,10 @@
       if (window.matchMedia) {
         var maxdppx = 1.0;
         var i=1.0;
-        for (; i<=maxRatio; i=(i+0.1).toFixed(1)) {
-          console.log("trying dppx: " + i);
-          console.log("(only screen and (min-resolution:" + i + "dppx))");
-          if (!window.matchMedia("(only screen and (min-resolution:" + i.toFixed(1) + "dppx))").matches) {
+        for (; i<=maxRatio; i=parseFloat((i+0.1).toFixed(1))) {
+          //console.log("trying dppx: " + i);
+          //console.log("(only screen and (min-resolution:" + i + "dppx))");
+          if (window.matchMedia("(only screen and (min-resolution:" + i.toFixed(1) + "dppx))").matches===false) {
             break;
           } else {
             maxdppx = i;
