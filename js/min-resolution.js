@@ -20,7 +20,7 @@
         var i=1.0;
         for (; i<=maxRatio; i=parseFloat((i+0.1).toFixed(1))) {
           //console.log("trying dpr: " + i);
-          if (window.matchMedia("(only screen and (" + Detector.supportDevicePixelRatio + "device-pixel-ratio:" + i.toFixed(1) + "))").matches===false) {
+          if (window.matchMedia("(" + Detector.supportDevicePixelRatio + "device-pixel-ratio:" + i.toFixed(1) + ")").matches===false) {
             break;
           } else {
             maxdpr = i;
@@ -37,8 +37,8 @@
         var i=1.0;
         for (; i<=maxRatio; i=parseFloat((i+0.1).toFixed(1))) {
           //console.log("trying dppx: " + i);
-          //console.log("(only screen and (min-resolution:" + i + "dppx))");
-          if (window.matchMedia("(only screen and (min-resolution:" + i.toFixed(1) + "dppx))").matches===false) {
+          //console.log("(min-resolution:" + i + "dppx)");
+          if (window.matchMedia("(min-resolution:" + i.toFixed(1) + "dppx)").matches===false) {
             break;
           } else {
             maxdppx = i;
