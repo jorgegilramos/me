@@ -7,7 +7,7 @@
         var prefixes = "-webkit-min- min--moz- -o-min- -ms-min- -khtml-min- ".split(" ");
         var mediaQuery = "device-pixel-ratio:1.0";
         for (var i=0; i<prefixes.length; i++) {
-          if (window.matchMedia("(" + prefixes[i] + mediaQuery + ")").matches) {
+          if (window.matchMedia("only screen and (" + prefixes[i] + mediaQuery + ")").matches) {
             return prefixes[i];
           }
         }
@@ -19,7 +19,7 @@
       if (supportDevicePixelRatio) {
         var maxdpr = 1.0;
         for (var i=1.0; i<maxRatio; i+=0.1) {
-          if (!window.matchMedia("(" + supportDevicePixelRatio + "device-pixel-ratio:" + i + ")").matches) {
+          if (!window.matchMedia("only screen and (" + supportDevicePixelRatio + "device-pixel-ratio:" + i + ")").matches) {
             return maxdpr;
           }
         }
@@ -31,7 +31,7 @@
     Detector.dppx = function() {
       if (window.matchMedia) {
         for (var i=1.0; i<maxRatio; i+=0.1) {
-          if (window.matchMedia("(min-resolution:" + i + "dppx)").matches) {
+          if (window.matchMedia("only screen and (min-resolution:" + i + "dppx)").matches) {
             return i;
           }
         }
