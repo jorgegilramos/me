@@ -32,7 +32,7 @@
     font-size: 24px;
     margin: 8px 0;
     padding: 12px;
-    min-width: 320px;
+    min-width: 310px;
     max-width: 570px;
   }
   .info .text {
@@ -72,7 +72,7 @@
 }
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  article .content-body {
+  .content-body {
     width: 500px;
   }
 }
@@ -83,6 +83,9 @@
 }
 /* Phone */
 @media only screen and (max-width: 480px) {
+  .wrap {
+    padding: 0 10px;
+  }
   p.info {
     margin: 12px 0;
   }
@@ -120,16 +123,16 @@
       <p class="info">xhdpi<br/><span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
       <p class="info">xxhdpi<br/><span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
       <p class="info">xxxhdpi<br/><span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
-      <!--
-        ldpi (low) ~120dpi
-        mdpi (medium) ~160dpi
-        hdpi (high) ~240dpi
-        xhdpi (extra-high) ~320dpi
-        xxhdpi (extra-extra-high) ~480dpi
-        xxxhdpi (extra-extra-extra-high) ~640dpi
-      </p>-->
       <script type="text/javascript">
-        // javascript just for detector message
+        /*
+        Screen resolution:
+        - ldpi (low) ~120dpi
+        - mdpi (medium) ~160dpi
+        - hdpi (high) ~240dpi
+        - xhdpi (extra-high) ~320dpi
+        - xxhdpi (extra-extra-high) ~480dpi
+        - xxxhdpi (extra-extra-extra-high) ~640dpi
+        */
         if (Detector) {
           document.getElementById("prefix").innerHTML = Detector.prefix;
           document.getElementById("dpr").innerHTML = Detector.devicePixelRatio.toFixed(1);
