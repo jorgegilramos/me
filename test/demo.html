@@ -3,127 +3,39 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Demo screen.detector.js</title>
+  <title>Demo screen.dpi.detector.js</title>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   
-  <style type="text/css" media="screen">
-  html, body {
-    color: #444;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    margin: 0;
-  }
-  .wrap {
-    padding: 0 15px;
-    margin: 0 auto;
-    max-width: 600px;  
-  }
-  .content-body {
-      font-size: 18px;
-      padding-bottom: 30px;
-      width: 600px;
-  }
-  p {
-    margin:30px 0;
-  }
-  p.info {
-    border-radius:8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 24px;
-    margin: 8px 0;
-    padding: 12px;
-    min-width: 310px;
-    max-width: 570px;
-  }
-  .info .text {
-    /*padding: 12px;*/
-  }
-  .info .details {
-    font-size: 14px;
-    font-style: italic;
-    padding-left:2px;
-    white-space: nowrap;
-  }
-  .info br {
-    display:none;
-  }
-  .r {
-    background:#f0f0f0;
-    border-bottom-right-radius:8px;
-    border-top-right-radius:8px;
-    float:right;
-    margin:-12px;
-    padding:12px 6px;
-    text-align:center;
-    width:150px;
-  }
-  .r.true {
-    background:#a2ce7e;
-    font-weight:bold;
-  }
-/* Media 900px */
-@media (max-width: 900px) {
-  .wrap {
-    max-width: auto;
-  }
-  .content-body {
-    width: auto;
-  }
-}
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .content-body {
-    width: 500px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  html, body {
-    font-size: 15px;
-  }
-}
-/* Phone */
-@media only screen and (max-width: 480px) {
-  .wrap {
-    padding: 0 10px;
-  }
-  p.info {
-    margin: 12px 0;
-  }
-  .info .r {
-    margin-top:-41px;
-    padding: 26.5px 0;
-    white-space:nowrap;
-    width:126px;
-  }
-  .info br {
-    display:block;
-  }
-}
-  </style>
-  <script src="../js/min-resolution.js" type="text/javascript"></script>
+  <link href="../css/demo.css" rel="stylesheet" media="screen" type="text/css" />
+  <script src="../js/screen.dpi.detector.js" type="text/javascript"></script>
 </head>
 <body>
   <div class="wrap">
     <div class="content-body">
-      <h2>Demo screen.detector.js</h2>
+      <h2>Demo screen.dpi.detector.js</h2>
       <p style="margin-top:0px">
-        Demo using javascript to detect high resolution screen in displays.
+        Demo using javascript to detect resolution pixel density (dpi) in screen.
       </p>
       <p>
-        Github project:<br/>
-        <a href="https://github.com/jorgegilramos/hdpi-detector">https://github.com/jorgegilramos/hdpi-detector</a>
+        Github repository:<br/>
+        <a href="https://github.com/jorgegilramos/screen-dpi-detector">https://github.com/jorgegilramos/screen-dpi-detector</a>
       </p>
-      <p class="info">prefix<br/>&nbsp;<span id="prefix" class="r" /></p>
-      <p class="info">device-pixel-ratio<br/>&nbsp;<span id="dpr" class="r" /></p>
-      <p class="info">min-resolution<br/><span class="details">dppx</span><span id="dppx" class="r" /></p>
-      <p class="info">min-resolution<br/><span class="details">dpi</span><span id="dpi" class="r" /></p>
+      <p>
+        Ricardo Jorge Gil Ramos<br/>
+        <a href="http://jorgegilramos.es">http://jorgegilramos.es</a>
+      </p>
+      <p class="info"><b>prefix</b><br/>&nbsp;<span id="prefix" class="r info"></span></p>
+      <p class="info"><b>device-pixel-ratio</b><br/><span class="details">detected</span><span id="dpr-detected" class="r info"></span></p>
+      <p class="info"><b>device-pixel-ratio</b><br/><span class="details">window</span><span id="dpr-window" class="r info"></span></p>
+      <p class="info"><b>min-resolution</b><br/><span class="details">dppx</span><span id="dppx" class="r info"></span></p>
+      <p class="info"><b>min-resolution</b><br/><span class="details">dpi</span><span id="dpi" class="r info"></span></p>
       <br />
-      <p class="info">ldpi<br/><span class="details">(low) ~120dpi</span><span id="ldpi" class="r"></span></p>
-      <p class="info">mdpi<br/><span class="details">(medium) ~160dpi</span><span id="mdpi" class="r"></span></p>
-      <p class="info">hdpi<br/><span class="details">(high) ~240dpi</span><span id="hdpi" class="r"></span></p>
-      <p class="info">xhdpi<br/><span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
-      <p class="info">xxhdpi<br/><span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
-      <p class="info">xxxhdpi<br/><span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
+      <p class="info"><b>ldpi</b><br/><span class="details">(low) ~120dpi</span><span id="ldpi" class="r"></span></p>
+      <p class="info"><b>mdpi</b><br/><span class="details">(medium) ~160dpi</span><span id="mdpi" class="r"></span></p>
+      <p class="info"><b>hdpi</b><br/><span class="details">(high) ~240dpi</span><span id="hdpi" class="r"></span></p>
+      <p class="info"><b>xhdpi</b><br/><span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
+      <p class="info"><b>xxhdpi</b><br/><span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
+      <p class="info"><b>xxxhdpi</b><br/><span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
       <script type="text/javascript">
         /*
         Screen resolution:
@@ -136,25 +48,24 @@
         */
         if (Detector) {
           document.getElementById("prefix").innerHTML = Detector.prefix;
-          document.getElementById("dpr").innerHTML = Detector.devicePixelRatio.toFixed(1);
+          document.getElementById("dpr-detected").innerHTML = Detector.devicePixelRatio.toFixed(1);
+          document.getElementById("dpr-window").innerHTML = window.devicePixelRatio.toFixed(1);
           document.getElementById("dppx").innerHTML = Detector.dppx.toFixed(1) + "dppx";
           document.getElementById("dpi").innerHTML = Detector.dpi + "dpi";
-      
-          // Check screens
+          // Screen resolution results
           document.getElementById("ldpi").innerHTML = Detector.screens["ldpi"];
-          document.getElementById("ldpi").className = "r " + Detector.screens["ldpi"].toString();
           document.getElementById("mdpi").innerHTML = Detector.screens["mdpi"];
-          document.getElementById("mdpi").className = "r " + Detector.screens["mdpi"].toString();
           document.getElementById("hdpi").innerHTML = Detector.screens["hdpi"];
-          document.getElementById("hdpi").className = "r " + Detector.screens["hdpi"].toString();
           document.getElementById("xhdpi").innerHTML = Detector.screens["xhdpi"];
-          document.getElementById("xhdpi").className = "r " + Detector.screens["xhdpi"].toString();
           document.getElementById("xxhdpi").innerHTML = Detector.screens["xxhdpi"];
-          document.getElementById("xxhdpi").className = "r " + Detector.screens["xxhdpi"].toString();
           document.getElementById("xxxhdpi").innerHTML = Detector.screens["xxxhdpi"];
-          document.getElementById("xxxhdpi").className = "r " + Detector.screens["xxxhdpi"].toString();
-        } else {
-          document.getElementById("detector-message").innerHTML = "";
+          // Classnames "true" or "false"
+          document.getElementById("ldpi").className = "r " + Detector.screens["ldpi"];
+          document.getElementById("mdpi").className = "r " + Detector.screens["mdpi"];
+          document.getElementById("hdpi").className = "r " + Detector.screens["hdpi"];
+          document.getElementById("xhdpi").className = "r " + Detector.screens["xhdpi"];
+          document.getElementById("xxhdpi").className = "r " + Detector.screens["xxhdpi"];
+          document.getElementById("xxxhdpi").className = "r " + Detector.screens["xxxhdpi"];
         }
       </script>
     </div>
