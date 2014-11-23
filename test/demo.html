@@ -6,6 +6,7 @@
   <style type="text/css" media="screen">
   body {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
     margin:0 auto;
     max-width:960px;
   }
@@ -13,12 +14,23 @@
     margin:30px 0;
   }
   .resolution {
-    width:240px;
+    font-size: 24px;
+    margin: 4px;
+    width:450px;
+  }
+  .resolution span {
+    font-size: 14px;
+    font-style: italic;
+    padding-left:2px;
   }
   .resolution div {
     float:right;
-    font-weight:bold; 
+    /*font-weight:bold;*/
     width:40px;
+  }
+  .r {
+    float:right;
+    width:60px;
   }
 
   #responsive-img {
@@ -39,19 +51,18 @@
     <a href="https://github.com/jorgegilramos/hdpi-detector">https://github.com/jorgegilramos/hdpi-detector</a>
   </p>
   <p>
-    <span id="detector-message"></span>
     <div class="resolution">prefix: <div id="prefix"></div></div>
     <div class="resolution">device-pixel-ratio: <div id="dpr"></div></div>
     <div class="resolution">min-resolution (dppx): <div id="dppx"></div></div>
     <div class="resolution">min-resolution (dpi) : <div id="dpi"></div></div>
   </p>
   <p>
-    <div class="resolution">ldpi: <div id="ldpi"></div></div>
-    <div class="resolution">mdpi: <div id="mdpi"></div></div>
-    <div class="resolution">hdpi: <div id="hdpi"></div></div>
-    <div class="resolution">xhdpi: <div id="xhdpi"></div></div>
-    <div class="resolution">xxhdpi: <div id="xxhdpi"></div></div>
-    <div class="resolution">xxxhdpi: <div id="xxxhdpi"></div></div>
+    <div class="resolution">ldpi    <span>(low) ~120dpi</span><div id="ldpi" class="r"></div></div>
+    <div class="resolution">mdpi    <span>(medium) ~160dpi</span><div id="mdpi" class="r"></div></div>
+    <div class="resolution">hdpi    <span>(high) ~240dpi</span><div id="hdpi" class="r"></div></div>
+    <div class="resolution">xhdpi   <span>(extra-high) ~320dpi</span><div id="xhdpi" class="r"></div></div>
+    <div class="resolution">xxhdpi  <span>(extra-extra-high) ~480dpi</span><div id="xxhdpi" class="r"></div></div>
+    <div class="resolution">xxxhdpi <span>(extra-extra-extra-high) ~640dpi</span><div id="xxxhdpi" class="r"></div></div>
   </p>
   <!--
     ldpi (low) ~120dpi
@@ -65,9 +76,9 @@
     // javascript just for detector message
     if (Detector) {
       document.getElementById("prefix").innerHTML = Detector.supportDevicePixelRatio;
-      document.getElementById("dpr").innerHTML = Detector.dpr;
-      document.getElementById("dppx").innerHTML = Detector.dppx;
-      document.getElementById("dpi").innerHTML = Detector.dpi;
+      document.getElementById("dpr").innerHTML = Detector.dpr.toFixed(1);
+      document.getElementById("dppx").innerHTML = Detector.dppx.toFixed(1) + "dppx";
+      document.getElementById("dpi").innerHTML = Detector.dpi + "dpi";
 
       // Check screens
       document.getElementById("ldpi").innerHTML = Detector.screens["ldpi"];

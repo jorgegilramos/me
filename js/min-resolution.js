@@ -1,10 +1,11 @@
 /*
-    ldpi (low) ~120dpi
-    mdpi (medium) ~160dpi
-    hdpi (high) ~240dpi
-    xhdpi (extra-high) ~320dpi
-    xxhdpi (extra-extra-high) ~480dpi
-    xxxhdpi (extra-extra-extra-high) ~640dpi
+  Device pixel density tests:
+  - ldpi (low) ~120dpi
+  - mdpi (medium) ~160dpi
+  - hdpi (high) ~240dpi
+  - xhdpi (extra-high) ~320dpi
+  - xxhdpi (extra-extra-high) ~480dpi
+  - xxxhdpi (extra-extra-extra-high) ~640dpi
 */
   window.Detector = (function(window, document, undefined){
     Detector = {};
@@ -49,8 +50,6 @@
         var maxdppx = 1.0;
         var i=1.0;
         for (; i<=maxRatio; i=parseFloat((i+0.1).toFixed(1))) {
-          //console.log("trying dppx: " + i);
-          //console.log("(min-resolution:" + i + "dppx)");
           if (window.matchMedia("(min-resolution:" + i.toFixed(1) + "dppx)").matches===false) {
             break;
           } else {
