@@ -14,7 +14,7 @@
     Detector.screens = {};
     
     // support for device-pixel-ratio: prefix for vendor, "" for native or undefined
-    Detector.supportDevicePixelRatio = function() {
+    Detector.prefix = function() {
       if (window.matchMedia) {
         var prefixes = "-webkit-min- min--moz- -o-min- -ms-min- -khtml-min- ".split(" ");
         var mediaQuery = "device-pixel-ratio:1.0";
@@ -28,12 +28,12 @@
     }();
     
     // device-pixel-ratio: Number of device pixels per CSS Pixel
-    Detector.dpr = function() {
-      if (Detector.supportDevicePixelRatio) {
+    Detector.devicePixelRatio = function() {
+      if (Detector.prefix) {
         var maxdpr = 1.0;
         var i=1.0;
         for (; i<=maxRatio; i=parseFloat((i+0.1).toFixed(1))) {
-          if (window.matchMedia("(" + Detector.supportDevicePixelRatio + "device-pixel-ratio:" + i.toFixed(1) + ")").matches===false) {
+          if (window.matchMedia("(" + Detector.prefix + "device-pixel-ratio:" + i.toFixed(1) + ")").matches===false) {
             break;
           } else {
             maxdpr = i;
@@ -64,18 +64,14 @@
     // dpi: Dots per inch
     Detector.dpi = Detector.dppx*96;
     
-    // Screens resolution
-    Detector.screens["ldpi"] = function(){
-      return Detector.dpi >= 120;
-    }();
-
     /*
-    ldpi (low) ~120dpi
-    mdpi (medium) ~160dpi
-    hdpi (high) ~240dpi
-    xhdpi (extra-high) ~320dpi
-    xxhdpi (extra-extra-high) ~480dpi
-    xxxhdpi (extra-extra-extra-high) ~640dpi
+    Screen resolution:
+    - ldpi (low) ~120dpi
+    - mdpi (medium) ~160dpi
+    - hdpi (high) ~240dpi
+    - xhdpi (extra-high) ~320dpi
+    - xxhdpi (extra-extra-high) ~480dpi
+    - xxxhdpi (extra-extra-extra-high) ~640dpi
     */
     var test = {"ldpi": 120, "mdpi": 160, "hdpi": 240, "xhdpi": 320, "xxhdpi": 480, "xxxhdpi": 640};
     for (var key in test) {

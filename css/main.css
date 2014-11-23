@@ -278,9 +278,8 @@ ol.toc.sticky {
     font-size: 12px;
   }
 }
-
+/* Phone */
 @media only screen and (max-width: 480px) {
-  /* Phone */
   #hamburger {
     float: none;
     margin-top: 26px;

@@ -32,7 +32,7 @@
     font-size: 24px;
     margin: 8px 0;
     padding: 12px;
-    min-width:440px;
+    min-width: 380px;
     max-width: 570px;
   }
   .info .text {
@@ -42,20 +42,24 @@
     font-size: 14px;
     font-style: italic;
     padding-left:2px;
+    white-space: nowrap;
+  }
+  .info br {
+    display:none;
   }
   .r {
-    float:right;
     background:#f0f0f0;
     border-bottom-right-radius:8px;
     border-top-right-radius:8px;
+    float:right;
     margin:-12px;
     padding:12px;
     text-align:center;
-    /*font-weight:bold;*/
-    width:130px;
+    width:136px;
   }
   .r.true {
     background:#a2ce7e;
+    font-weight:bold;
   }
 /* Media 900px */
 @media (max-width: 900px) {
@@ -77,6 +81,19 @@
     font-size: 15px;
   }
 }
+/* Phone */
+@media only screen and (max-width: 480px) {
+  p.info {
+    margin: 12px 0;
+  }
+  .info .r {
+    margin-top:-41px;
+    padding: 26.5px;
+  }
+  .info br {
+    display:block;
+  }
+}
   </style>
   <script src="../js/min-resolution.js" type="text/javascript"></script>
 </head>
@@ -91,17 +108,17 @@
         Github project:<br/>
         <a href="https://github.com/jorgegilramos/hdpi-detector">https://github.com/jorgegilramos/hdpi-detector</a>
       </p>
-      <p class="info">prefix <span id="prefix" class="r" /></p>
-      <p class="info">device-pixel-ratio <span id="dpr" class="r" /></p>
-      <p class="info">min-resolution <span class="details">dppx</span><span id="dppx" class="r" /></p>
-      <p class="info">min-resolution <span class="details">dpi</span><span id="dpi" class="r" /></p>
+      <p class="info">prefix<br/>&nbsp;<span id="prefix" class="r" /></p>
+      <p class="info">device-pixel-ratio<br/>&nbsp;<span id="dpr" class="r" /></p>
+      <p class="info">min-resolution<br/><span class="details">dppx</span><span id="dppx" class="r" /></p>
+      <p class="info">min-resolution<br/><span class="details">dpi</span><span id="dpi" class="r" /></p>
       <br />
-      <p class="info">ldpi<span class="details">(low) ~120dpi</span><span id="ldpi" class="r"></span></p>
-      <p class="info">mdpi<span class="details">(medium) ~160dpi</span><span id="mdpi" class="r"></span></p>
-      <p class="info">hdpi<span class="details">(high) ~240dpi</span><span id="hdpi" class="r"></span></p>
-      <p class="info">xhdpi<span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
-      <p class="info">xxhdpi<span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
-      <p class="info">xxxhdpi<span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
+      <p class="info">ldpi<br/><span class="details">(low) ~120dpi</span><span id="ldpi" class="r"></span></p>
+      <p class="info">mdpi<br/><span class="details">(medium) ~160dpi</span><span id="mdpi" class="r"></span></p>
+      <p class="info">hdpi<br/><span class="details">(high) ~240dpi</span><span id="hdpi" class="r"></span></p>
+      <p class="info">xhdpi<br/><span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
+      <p class="info">xxhdpi<br/><span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
+      <p class="info">xxxhdpi<br/><span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
       <!--
         ldpi (low) ~120dpi
         mdpi (medium) ~160dpi
@@ -113,8 +130,8 @@
       <script type="text/javascript">
         // javascript just for detector message
         if (Detector) {
-          document.getElementById("prefix").innerHTML = Detector.supportDevicePixelRatio;
-          document.getElementById("dpr").innerHTML = Detector.dpr.toFixed(1);
+          document.getElementById("prefix").innerHTML = Detector.prefix;
+          document.getElementById("dpr").innerHTML = Detector.devicePixelRatio.toFixed(1);
           document.getElementById("dppx").innerHTML = Detector.dppx.toFixed(1) + "dppx";
           document.getElementById("dpi").innerHTML = Detector.dpi + "dpi";
       
