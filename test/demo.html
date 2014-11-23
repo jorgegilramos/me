@@ -14,9 +14,15 @@
     margin:30px 0;
   }
   p.info {
+    border-radius:8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 24px;
-    margin: 4px;
+    margin: 4px 0;
+    padding: 12px;
     width:480px;
+  }
+  .info .text {
+    /*padding: 12px;*/
   }
   .info .details {
     font-size: 14px;
@@ -25,10 +31,18 @@
   }
   .r {
     float:right;
+    background:#f0f0f0;
+    border-bottom-right-radius:8px;
+    border-top-right-radius:8px;
+    margin:-12px;
+    padding:12px;
     /*font-weight:bold;*/
     width:120px;
   }
-
+  .r.true {
+    background:#a2ce7e;
+  }
+  
   #responsive-img {
     height:48px;
     width:138px;
@@ -51,12 +65,12 @@
   <p class="info">min-resolution <span class="details">dppx</span><span id="dppx" class="r" /></p>
   <p class="info">min-resolution <span class="details">dpi</span><span id="dpi" class="r" /></p>
   <br />
-  <p class="info">ldpi    <span class="details">(low) ~120dpi</span><span id="ldpi" class="r"></span></p>
-  <p class="info">mdpi    <span class="details">(medium) ~160dpi</span><span id="mdpi" class="r"></span></p>
-  <p class="info">hdpi    <span class="details">(high) ~240dpi</span><span id="hdpi" class="r"></span></p>
-  <p class="info">xhdpi   <span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
-  <p class="info">xxhdpi  <span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
-  <p class="info">xxxhdpi <span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
+  <p class="info">ldpi<span class="details">(low) ~120dpi</span><span id="ldpi" class="r"></span></p>
+  <p class="info">mdpi<span class="details">(medium) ~160dpi</span><span id="mdpi" class="r"></span></p>
+  <p class="info">hdpi<span class="details">(high) ~240dpi</span><span id="hdpi" class="r"></span></p>
+  <p class="info">xhdpi<span class="details">(extra-high) ~320dpi</span><span id="xhdpi" class="r"></span></p>
+  <p class="info">xxhdpi<span class="details">(extra-extra-high) ~480dpi</span><span id="xxhdpi" class="r"></span></p>
+  <p class="info">xxxhdpi<span class="details">(extra-extra-extra-high) ~640dpi</span><span id="xxxhdpi" class="r"></span></p>
   <!--
     ldpi (low) ~120dpi
     mdpi (medium) ~160dpi
@@ -75,11 +89,17 @@
 
       // Check screens
       document.getElementById("ldpi").innerHTML = Detector.screens["ldpi"];
+      document.getElementById("ldpi").className = "r " + Detector.screens["ldpi"].toString();
       document.getElementById("mdpi").innerHTML = Detector.screens["mdpi"];
+      document.getElementById("mdpi").className = "r " + Detector.screens["mdpi"].toString();
       document.getElementById("hdpi").innerHTML = Detector.screens["hdpi"];
+      document.getElementById("hdpi").className = "r " + Detector.screens["hdpi"].toString();
       document.getElementById("xhdpi").innerHTML = Detector.screens["xhdpi"];
+      document.getElementById("xhdpi").className = "r " + Detector.screens["xhdpi"].toString();
       document.getElementById("xxhdpi").innerHTML = Detector.screens["xxhdpi"];
+      document.getElementById("xxhdpi").className = "r " + Detector.screens["xxhdpi"].toString();
       document.getElementById("xxxhdpi").innerHTML = Detector.screens["xxxhdpi"];
+      document.getElementById("xxxhdpi").className = "r " + Detector.screens["xxxhdpi"].toString();
     } else {
       document.getElementById("detector-message").innerHTML = "";
     }
