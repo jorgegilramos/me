@@ -373,6 +373,41 @@ ol.toc.sticky {
   color: #5cc9df;
 }
 
-
-
-
+/* Prev and next button */
+.touch #explore-gutter a.prev-button:hover {
+  opacity:1;
+}
+.touch #explore-gutter a.next-button:hover {
+  opacity:1;
+}
+.touch #explore-gutter a.prev-button {
+  left: 0;
+  margin-top: -32px;
+  margin-left: 0;
+  padding-left: 0;
+  position: fixed;
+  top: 50%;
+  z-index: 1;
+}
+.touch #explore-gutter a.next-button {
+  margin-top: -32px;
+  margin-left: 0;
+  padding-right: 0;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+.touch #explore-gutter a {
+  color: #a2ce7e;
+  font-size:56px;
+  height: 59px;
+  overflow: hidden;
+  position: relative;
+  opacity:0.2;
+  width: 52px;
+}
+.touch .prev-button .txt, .next-button .txt, .touch .prev-button .text, .next-button .text {
+    display: block;
+    padding-bottom: 3px;
+}
