@@ -53,9 +53,6 @@ $(function(){
     setInterval(function() {
       if (didScroll) {
         didScroll = false;
-        console.log("scrollY: " + window.scrollY)
-        console.log("tocOffset: " + tocOffset);
-        console.log( "tocPadding: " + tocPadding)
         if (window.scrollY > tocOffset - tocPadding)
           toc.addClass('sticky');
         else
