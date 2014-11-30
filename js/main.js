@@ -1,4 +1,16 @@
 $(function(){
+  // Inialize slideshow
+	var slideshow = new SlideWidget({
+		container: '#slider-1',
+		startSlide: 0,
+		speed: 500,
+		auto: 6000,
+		margin: 20
+	});
+	slideshow.swipe.transitionEnd();
+  // Start the show!
+  slideshow.swipe.resume();
+  
   // Initalize the ToC if we're on an article page
   if ($('.js-toc').length) {
     tableOfContents($('.js-toc'));
@@ -41,7 +53,9 @@ $(function(){
     setInterval(function() {
       if (didScroll) {
         didScroll = false;
-
+        console.log("scrollY: " + window.scrollY)
+        console.log("tocOffset: " + tocOffset);
+        console.log( "tocPadding: " + tocPadding)
         if (window.scrollY > tocOffset - tocPadding)
           toc.addClass('sticky');
         else
