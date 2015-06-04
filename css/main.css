@@ -452,6 +452,9 @@ ol.toc.sticky {
 }
 
 /* Prev and next button */
+.no-touch #explore-gutter {
+  display:none;
+}
 .touch #explore-gutter a.prev-button:hover {
   opacity:1;
 }
@@ -488,4 +491,26 @@ ol.toc.sticky {
 .touch .prev-button .txt, .next-button .txt, .touch .prev-button .text, .next-button .text {
   display: block;
   padding-bottom: 3px;
+}
+
+/*#scrollUp:before {
+    color: #ccc;
+    content: "";
+    display: inline-block;
+    font: 14px/18px "fontawesome",Arial,sans-serif;
+    vertical-align: middle;
+}*/
+#scrollUp:hover {
+  opacity:1;
+}
+#scrollUp {
+  border-radius: 300;
+  bottom: 20px;
+  color: #a2ce7e;
+  font-size:46px;
+  height: 46px;
+  opacity: 0.5;
+  right: 20px;
+  text-align: center;
+  width: 46px;
 }
