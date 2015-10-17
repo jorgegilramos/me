@@ -438,6 +438,7 @@ ol.toc.sticky {
   transition: all 0.3s ease-out 0.2s;
 }
 .features .media {
+  cursor: pointer;
   margin-bottom: 40px;
 }
 .features .media-body p {
