@@ -515,3 +515,31 @@ ol.toc.sticky {
   text-align: center;
   width: 46px;
 }
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #eee -moz-use-text-color -moz-use-text-color;
+  border-image: none;
+  border-style: solid none none;
+  border-width: 1px 0 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.blog-post {
+    margin-bottom: 0px;
+}
+.blog-post h1:first-child, .blog-post h2:first-child, .blog-post h3:first-child, .blog-post h4:first-child {
+    margin: 0;
+}
+.blog-post h1:first-child a:visited, .blog-post h2:first-child a:visited, .blog-post h3:first-child a:visited, .blog-post h4:first-child a:visited {
+    color: #006084;
+}
+.blog-post time {
+    color: #aaa;
+    display: block;
+    font-size: small;
+}
