@@ -17,14 +17,20 @@ a {
 header {
   background:#2980b9; /*#dfefef*/
   color:#ffffff;
-  padding: 20px 0 20px;
+  padding: 16px 0 20px;
 }
 h1#site-title {
   display: inline-block;
   font-family: "Pacifico",Georgia,serif;
   font-size: 28px;
-  padding-left: 10px;
-  margin: 0px;
+  margin:0 0 0 10px;
+  border-bottom: solid 4px #2980b9;
+}
+h1#site-title a {
+  color: #ffffff;
+}
+h1#site-title:hover {
+  border-bottom: solid 4px #5cc9df;
 }
 #logo {
   float: left;
@@ -134,9 +140,8 @@ html .mm-header .mm-prev, html .mm-header .mm-next {
 }
 
 .show-phone {
-  display:none;
+  /*display:none;*/
 }
-
 
 /* Slides */
 .slides:before, .slides:after {
@@ -515,7 +520,7 @@ ol.toc.sticky {
   text-align: center;
   width: 46px;
 }
-
+/*Separator*/
 hr {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
@@ -530,16 +535,22 @@ hr {
 }
 
 .blog-post {
-    margin-bottom: 0px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+.blog-post:hover {
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.13);
 }
 .blog-post h1:first-child, .blog-post h2:first-child, .blog-post h3:first-child, .blog-post h4:first-child {
-    margin: 0;
+  margin: 0;
 }
 .blog-post h1:first-child a:visited, .blog-post h2:first-child a:visited, .blog-post h3:first-child a:visited, .blog-post h4:first-child a:visited {
-    color: #006084;
+  color: #006084;
 }
 .blog-post time {
-    color: #aaa;
-    display: block;
-    font-size: small;
+  color: #aaa;
+  display: block;
+  font-size: small;
 }

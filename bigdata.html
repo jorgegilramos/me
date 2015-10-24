@@ -14,9 +14,9 @@
   <link rel="stylesheet" href="css/gridism.css" />
   <link rel="stylesheet" href="fonts/font-awesome.min.css" />
   <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css?v=2.1.5" media="screen"/>
-  <link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css?v=1.0.5" />
+  <link rel="stylesheet" href="css/fancybox/jquery.fancybox-buttons.css?v=1.0.5"/>
   <link rel="stylesheet" href="js/mmenu/css/jquery.mmenu.all.css"/>
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.css"/>
 
   <script src="js/modernizr.2.8.3.min.js" type="text/javascript"></script>
   <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
@@ -28,13 +28,13 @@
   <div> <!-- wrapper mmenu -->
   <!--<div id="under-construction"><div class="wrap">This site is under construction <i class="fa fa-warning fa-lg"></i></div></div>-->
   <div id="no-js-message">
-    <div class="wrap">This site works better with JavaScript enabled <i class="fa fa-warning fa-lg"></i><br/>
+    <div class="wrap">It appears you have javascript switched off. This site works better with JavaScript enabled <i class="fa fa-warning fa-lg"></i><br/>
     Here are the <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web browser</a>.</div>
   </div>
   <header>
     <div class="wrap">
-      <img id="logo" src="img/logo.png" />
-      <h1 id="site-title">Ricardo Jorge Gil Ramos</h1>
+      <img id="logo" src="img/logo.png" alt="logo"/>
+      <h1 id="site-title"><a href="./index.html">Ricardo Jorge Gil Ramos</a></h1>
       <div class="profile-icons hide-phone">
         <a href="http://es.linkedin.com/in/jorgegilramos" class="profile-icon fa fa-linkedin" target="_blank"></a>
         <a href="https://github.com/jorgegilramos" class="profile-icon fa fa-github" target="_blank"></a>
@@ -42,7 +42,7 @@
         <a href="https://plus.google.com/u/0/109912004724487165210/posts" class="profile-icon fa fa-google-plus" target="_blank"></a>
         <!--<a href="https://www.facebook.com/pages/" class="profile-icon fa fa-facebook" target="_blank"></a>
         <a href="http://www.youtube.com/user/" class="profile-icon fa fa-youtube" target="_blank"></a>-->
-        <a id="fancy-modal-rss" class="profile-icon fa fa-rss fancybox fancybox.ajax" href="html/fancy-modal.html" data-fancybox-type="ajax"></a>
+        <a class="fancy-modal-rss profile-icon fa fa-rss fancybox fancybox.ajax" href="html/fancy-modal.html" data-fancybox-type="ajax" rel="nofollow"></a>
       </div>
       <a id="hamburger" class="mm-slideout show-phone" href="#mainMenu"><span></span></a>
     </div>
@@ -103,87 +103,8 @@
     </div>
   </footer>
   </div>
+
   <nav id="mainMenu" class="mm-menu mm-offcanvas" style="width:300px; font-family:Arial,Helvetica,Verdana;">
-    <ul>
-      <li class="mm-selected">
-        <a href="./index.html"><i class="fa fa-home" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; Home</a>
-      </li>
-      <li>
-        <span><a> &nbsp; Big Data & BI</a></span>
-        <div>
-          <ul id="menu-bigdata">
-            <li>
-              <a href="./bigdata.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; Big Data</a>
-            </li>
-            <li>
-              <a href="./bi.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; Business Intelligence</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <span><a> &nbsp; Data Science & Dashboards</a></span>
-        <div>
-          <ul id="menu-datascience">
-            <li>
-              <a href="./datascience.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; Data Science</a>
-            </li>
-            <li>
-              <a href="./dashboards.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; Dashboards</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <span><a> &nbsp; HTML5 & CSS3</a></span>
-        <div>
-          <ul id="menu-html5">
-            <li>
-              <a href="./html5.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; HTML5</a>
-            </li>
-            <li>
-              <a href="./css3.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; CSS3</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <span><a> &nbsp; Blog</a></span>
-        <div>
-          <ul id="menu-blog">
-            <li>
-              <span><a> &nbsp; First Entry</a></span>
-              <div>
-                <ul>
-                  <li>
-                    <a href="./index.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; linkText 1</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <span><a> &nbsp; Second Entry</a></span>
-              <div>
-                <ul>
-                  <li>
-                    <a href="./index.html"><i class="fa fa-table" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; linkText 2</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li id="menu-help" style="padding:200px 20px 0px 44px">
-        <a href="#" style="padding-left:0px" class="showGuide">
-          <i class="fa fa-question-circle" style="color:rgba(0, 0, 0, 0.3)"></i> &nbsp; Ricardo Jorge Gil Ramos</a>
-      </li>
-      <li id="menu-footer">
-        <p>
-          Personal Page<br/>RJGR &copy; 2014<br/>
-        </p>
-      </li>
-    </ul>
   </nav>
   
   <div id="explore-gutter" class="fixed" style="">
