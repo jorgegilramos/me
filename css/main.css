@@ -138,9 +138,9 @@ html .mm-header .mm-prev, html .mm-header .mm-next {
 #menu-footer:after {
     border: medium none !important;
 }
-
+/* Normal screen*/
 .show-phone {
-  /*display:none;*/
+  display:none;
 }
 
 /* Slides */
@@ -316,6 +316,48 @@ ol.toc.sticky {
   article .content-body {
     width: 500px;
   }
+  
+  /* Prev and next button */
+  .no-touch #explore-gutter {
+    display:none;
+  }
+  .touch #explore-gutter a.prev-button:hover {
+    opacity:1;
+  }
+  .touch #explore-gutter a.next-button:hover {
+    opacity:1;
+  }
+  .touch #explore-gutter a.prev-button {
+    left: 0;
+    margin-top: -32px;
+    margin-left: 0;
+    padding-left: 0;
+    position: fixed;
+    top: 50%;
+    z-index: 1;
+  }
+  .touch #explore-gutter a.next-button {
+    margin-top: -32px;
+    margin-left: 0;
+    padding-right: 0;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+  }
+  .touch #explore-gutter a {
+    color: #a2ce7e;
+    font-size:56px;
+    height: 59px;
+    overflow: hidden;
+    position: relative;
+    opacity:0.2;
+    width: 52px;
+  }
+  .touch .prev-button .txt, .next-button .txt, .touch .prev-button .text, .next-button .text {
+    display: block;
+    padding-bottom: 3px;
+  }
 }
 @media only screen and (max-width: 767px) {
   html, body {
@@ -457,48 +499,6 @@ ol.toc.sticky {
   color: #5cc9df;
 }
 
-/* Prev and next button */
-.no-touch #explore-gutter {
-  display:none;
-}
-.touch #explore-gutter a.prev-button:hover {
-  opacity:1;
-}
-.touch #explore-gutter a.next-button:hover {
-  opacity:1;
-}
-.touch #explore-gutter a.prev-button {
-  left: 0;
-  margin-top: -32px;
-  margin-left: 0;
-  padding-left: 0;
-  position: fixed;
-  top: 50%;
-  z-index: 1;
-}
-.touch #explore-gutter a.next-button {
-  margin-top: -32px;
-  margin-left: 0;
-  padding-right: 0;
-  position: fixed;
-  right: 0;
-  top: 50%;
-  z-index: 1;
-}
-.touch #explore-gutter a {
-  color: #a2ce7e;
-  font-size:56px;
-  height: 59px;
-  overflow: hidden;
-  position: relative;
-  opacity:0.2;
-  width: 52px;
-}
-.touch .prev-button .txt, .next-button .txt, .touch .prev-button .text, .next-button .text {
-  display: block;
-  padding-bottom: 3px;
-}
-
 /*#scrollUp:before {
     color: #ccc;
     content: "";
@@ -530,6 +530,7 @@ hr {
   border-image: none;
   border-style: solid none none;
   border-width: 1px 0 0;
+  color: #eee;
   margin-bottom: 20px;
   margin-top: 20px;
 }
