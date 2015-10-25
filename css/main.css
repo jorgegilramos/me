@@ -279,6 +279,48 @@ ol.toc.sticky {
   width:33.33%;
 }
 
+/* Prev and next button */
+.no-touch #explore-gutter {
+  display:none;
+}
+.touch #explore-gutter a.prev-button:hover {
+  opacity:1;
+}
+.touch #explore-gutter a.next-button:hover {
+  opacity:1;
+}
+.touch #explore-gutter a.prev-button {
+  left: 0;
+  margin-top: -32px;
+  margin-left: 0;
+  padding-left: 0;
+  position: fixed;
+  top: 50%;
+  z-index: 1;
+}
+.touch #explore-gutter a.next-button {
+  margin-top: -32px;
+  margin-left: 0;
+  padding-right: 0;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+.touch #explore-gutter a {
+  color: #a2ce7e;
+  font-size:56px;
+  height: 59px;
+  overflow: hidden;
+  position: relative;
+  opacity:0.2;
+  width: 52px;
+}
+.touch .prev-button .txt, .next-button .txt, .touch .prev-button .text, .next-button .text {
+  display: block;
+  padding-bottom: 3px;
+}
+
 /* Media 900px */
 @media (max-width: 900px) {
   .wrap {
@@ -315,48 +357,6 @@ ol.toc.sticky {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   article .content-body {
     width: 500px;
-  }
-  
-  /* Prev and next button */
-  .no-touch #explore-gutter {
-    display:none;
-  }
-  .touch #explore-gutter a.prev-button:hover {
-    opacity:1;
-  }
-  .touch #explore-gutter a.next-button:hover {
-    opacity:1;
-  }
-  .touch #explore-gutter a.prev-button {
-    left: 0;
-    margin-top: -32px;
-    margin-left: 0;
-    padding-left: 0;
-    position: fixed;
-    top: 50%;
-    z-index: 1;
-  }
-  .touch #explore-gutter a.next-button {
-    margin-top: -32px;
-    margin-left: 0;
-    padding-right: 0;
-    position: fixed;
-    right: 0;
-    top: 50%;
-    z-index: 1;
-  }
-  .touch #explore-gutter a {
-    color: #a2ce7e;
-    font-size:56px;
-    height: 59px;
-    overflow: hidden;
-    position: relative;
-    opacity:0.2;
-    width: 52px;
-  }
-  .touch .prev-button .txt, .next-button .txt, .touch .prev-button .text, .next-button .text {
-    display: block;
-    padding-bottom: 3px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -409,6 +409,9 @@ ol.toc.sticky {
   .slides-nav .icon-next-slide {
     margin-left: 1rem;
   }
+  .touch #explore-gutter {
+    display:none;
+  }
 }
 #under-construction, #no-js-message {
   background-color:#a2ce7e; /*#1fa67a; #1b926c*/
@@ -439,7 +442,6 @@ ol.toc.sticky {
 .content-body pre {
 	margin: 15px 0; 
 }
-
 
 .row {
   clear:both
