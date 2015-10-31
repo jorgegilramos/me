@@ -393,11 +393,27 @@ ol.toc.sticky {
     font-size: 12px;
   }
 }
-/* Phone */
+/* Phone Portrait */
 @media only screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    position: fixed;
+    z-index: 5000;
+  }
+  h1#site-title {
+    font-size: 22px;
+  }
   #hamburger {
-    float: none;
-    margin-top: 26px;
+    /*float: none;
+    margin-top: 26px;*/
+    float: right;
+    margin-top: 0px;
+  }
+  #logo {
+    display: none;
+  }
+  article #center-body {
+    padding-top: 80px;
   }
   .slide .text_xxl {
     font-size: 4rem;
