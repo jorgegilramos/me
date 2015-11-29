@@ -12,23 +12,19 @@ $(function(){
     success: function (data) { 
       $('#mainMenu').append(data);
       $("#mainMenu").mmenu({
-        classes: "mm-white", //"mm-light", // "mm-white" "mm-fullscreen"
-        //slidingSubmenus: false,
+        extensions: ["theme-white"],
         counters: true,
         offCanvas: {
           //pageNodetype: "article",
           zposition: "front"
         },
-        "iconPanels": true,
-        "navbar": {
-           "title": "Ricardo Jorge Gil Ramos"
+        navbar: {
+          title: "RJGR Personal Page"
         },
-        "navbars": [
-           {
-              "position": "bottom",
-              "content": ['<div>Hosted by <a href="https://www.byte.nl/" target="_blank">Byte</a></div>']
-           }
-        ]
+        navbars: [{
+          position: "bottom",
+          content: ['<div><a href="./index.html"><i class="fa fa-copyright"></i> &nbsp; Ricardo Jorge Gil Ramos</a></div>']
+        }]
       });
     },
     dataType: 'html'

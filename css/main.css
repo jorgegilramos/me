@@ -352,14 +352,14 @@ html .mm-header .mm-prev, html .mm-header .mm-next {
   border-bottom:rgba(0, 0, 0, 0.1) 1px !important;
   border-bottom-style:solid !important;
 }
-#menu-help {
+/*#menu-help {
 }
 #menu-footer {
   padding:0px 20px 30px 44px;
 }
 #menu-footer:after {
   border: medium none !important;
-}
+}*/
 /* Normal screen*/
 .show-phone {
   display:none;
