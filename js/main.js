@@ -18,7 +18,17 @@ $(function(){
         offCanvas: {
           //pageNodetype: "article",
           zposition: "front"
-        }
+        },
+        "iconPanels": true,
+        "navbar": {
+           "title": "Ricardo Jorge Gil Ramos"
+        },
+        "navbars": [
+           {
+              "position": "bottom",
+              "content": ['<div>Hosted by <a href="https://www.byte.nl/" target="_blank">Byte</a></div>']
+           }
+        ]
       });
     },
     dataType: 'html'
@@ -100,17 +110,12 @@ $(function(){
   }
   
   // fancybox 
-  $("#fancy-modal-rss").fancybox();
-  $("#tagcloud a").fancybox();
+  $(".fancy-modal-rss").fancybox();
 
   $.scrollUp({
     scrollTrigger: $("<a id='scrollUp' href='#top' class='fa fa-chevron-circle-up'></a>"),
-    scrollText: "" //"<i class='fa fa-chevron-up'></i>"
+    scrollText: ""
   });
-  //$.scrollUp({
-  //  animation: 'fade',
-  //  activeOverlay: '#00FFFF'
-  //});
   
   // Features navigation
   $("#bigdata-feature, #bi-feature").on("click", function(){location.href="bigdata.html";});
