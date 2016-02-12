@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://www.jorgegilramos.es/index.html</loc>
+  </url>
+  <url>
     <loc>http://www.jorgegilramos.es/bigdata.html</loc>
+  </url>
+  <url>
     <loc>http://www.jorgegilramos.es/javascript.html</loc>
+  </url>
+  <url>
     <loc>http://www.jorgegilramos.es/datascience.html</loc>
+  </url>
+  <url>
     <loc>http://www.jorgegilramos.es/maps.html</loc>
+  </url>
+  <url>
     <loc>http://www.jorgegilramos.es/design.html</loc>
+  </url>
+  <url>
     <loc>http://www.jorgegilramos.es/references.html</loc>
   </url>
 </urlset>
