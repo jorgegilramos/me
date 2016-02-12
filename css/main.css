@@ -360,6 +360,10 @@ html .mm-header .mm-prev, html .mm-header .mm-next {
 #menu-footer:after {
   border: medium none !important;
 }
+.mm-page::after{
+  content:".";
+  visibility:hidden;
+}
 /* Normal screen*/
 .show-phone {
   display:none;
