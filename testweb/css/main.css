@@ -352,13 +352,17 @@ html .mm-header .mm-prev, html .mm-header .mm-next {
   border-bottom:rgba(0, 0, 0, 0.1) 1px !important;
   border-bottom-style:solid !important;
 }
-#menu-help {
-}
 #menu-footer {
-  padding:0px 20px 30px 44px;
-}
-#menu-footer:after {
-  border: medium none !important;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  font-size:14px;
+  padding-bottom:0px;
+  padding-left:10px;
+  background:#fff;
+  text-align:center;
+  border:solid 1px rgba(0, 0, 0, 0.1);
+  border-width: 1px 0px 0px;
 }
 .mm-page::after{
   content:".";

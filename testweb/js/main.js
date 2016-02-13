@@ -26,10 +26,11 @@ $(function(){
         "navbars": [
            {
               "position": "bottom",
-              "content": ['<div>Hosted by <a href="https://www.byte.nl/" target="_blank">Byte</a></div>']
+              "content": ['']
            }
         ]
       });
+    $("#menu-footer").removeClass("mm-panel mm-hidden");
     },
     dataType: 'html'
   });
